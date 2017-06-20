@@ -1,0 +1,23 @@
+{
+    // See https://go.microsoft.com//fwlink//?linkid=834763 for more information about this file.
+    "configurations": [
+      {
+        "name": "Debug",
+        "generator": "Visual Studio 15 2017 Win64",
+        "configurationType": "Debug",
+        "buildRoot": "${projectDir}\\build\\${name}",
+        "cmakeCommandArgs": "-DUSE_MSVC_RUNTIME_LIBRARY_DLL=OFF",
+        "buildCommandArgs": "-m -v:minimal -p:PreferredToolArchitecture=x64",
+        "ctestCommandArgs": ""
+      },
+      {
+        "name": "Release",
+        "generator": "Visual Studio 15 2017 Win64",
+        "configurationType": "Release",
+        "buildRoot": "${projectDir}\\build\\${name}",
+        "cmakeCommandArgs": "-DUSE_MSVC_RUNTIME_LIBRARY_DLL=OFF,NO_CONSOLE=ON",
+        "buildCommandArgs": "-m -v:minimal -p:PreferredToolArchitecture=x64",
+        "ctestCommandArgs": ""
+      }
+    ]
+}
